@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 mongoose.connect(dbConfig.url);
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+//var users = require('./routes/users');
 
 var app = express();
 
@@ -34,7 +34,6 @@ var expressSession = require('express-session');
 app.use(expressSession({secret: 'mySecretKey'}));
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 // Using the flash middleware provided by connect-flash to store messages in session
 // and displaying in templates
